@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="10.0.2" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="by.training.patient.bean.Patient">
+    <void property="address">
+     <string>Tolstogo, 18, 25</string>
+    </void>
+    <void property="diagnosis">
+     <string>diabetes</string>
+    </void>
+    <void property="doctor">
+     <string>I.I.Vozenkov</string>
+    </void>
+    <void property="name">
+     <string>Illia</string>
+    </void>
+    <void property="numOfDepartment">
+     <string>Therapy</string>
+    </void>
+    <void property="numOfMedPolicy">
+     <string>AM 236159423</string>
+    </void>
+    <void property="phone">
+     <string>+375172791285</string>
+    </void>
+    <void property="surname">
+     <string>Anenkov</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <null/>
+  </void>
+ </object>
+</java>
