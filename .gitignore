@@ -1,0 +1,6 @@
+*.iml
+.DS_Store
+.idea
+out/
+
+/src/min/java/by/training/a
