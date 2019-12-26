@@ -7,14 +7,12 @@ public class Hospital {
 
     List<Patient> patientList = new ArrayList<>();
 
-    public ArrayList<Patient> fillList(Patient patient) {
+    public ArrayList<Patient> fillList() {
 
         patientList.add(new Patient("Anenkov", "Illia",
                 "Tolstogo, 18, 25","+375172791285",
-                "AM 236159423","diabetes",
-                "I.I.Vozenkov", "Therapy"));
-
-        patientList.add(patient);
+                236159423,"diabetes",
+                "I.I.Vozenkov", Department.THERAPY));
 
         return (ArrayList<Patient>) patientList;
     }

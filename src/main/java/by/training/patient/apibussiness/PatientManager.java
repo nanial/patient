@@ -7,7 +7,11 @@ import java.util.ArrayList;
 
 public interface PatientManager {
 
-    ArrayList<Patient> getPatientList(Filter filter);
-    ArrayList<Patient> getPatientOfCertainDoctor(Filter filter);
-    void writePatientInFile(ArrayList<Patient> patients);
+    ArrayList<Patient> patientList();//receive from dao
+    ArrayList<Patient> patientCertainDoctor(ArrayList<Patient> patientList, Filter filter);// native method
+    ArrayList<Patient> patientCertainDiagnosis(ArrayList<Patient> patientList, Filter filter);// native method
+    ArrayList<Patient> patientCertainNumPolicy(ArrayList<Patient> patientList, Filter filter);// native method
+    ArrayList<Patient> patientCertainDepartment(ArrayList<Patient> patientList, Filter filter);// native method
+
+    ArrayList<Patient> writePatientInFile(ArrayList<Patient> patients);// from dao
 }

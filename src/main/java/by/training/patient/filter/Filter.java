@@ -1,28 +1,46 @@
 package by.training.patient.filter;
 
+import by.training.patient.bean.Department;
+
 public class Filter {
 
-    private String numOfMedPolicy;
+    private int numOfMedPolicyLow;
+    private int getNumOfMedPolicyHigh;
     private String diagnosis;
     private String doctor;
-    private String numOfDepartment;
+    private Department department;
 
     public Filter() {
     }
 
-    public Filter(String numOfMedPolicy, String diagnosis, String doctor, String numOfDepartment) {
-        this.numOfMedPolicy = numOfMedPolicy;
-        this.diagnosis = diagnosis;
+    public Filter(String doctor) {
         this.doctor = doctor;
-        this.numOfDepartment = numOfDepartment;
     }
 
-    public String getNumOfMedPolicy() {
-        return numOfMedPolicy;
+    public Filter(String diagnosis, String department) {
+        this.diagnosis = diagnosis;
+        this.department = Department.valueOf(department);
     }
 
-    public void setNumOfMedPolicy(String numOfMedPolicy) {
-        this.numOfMedPolicy = numOfMedPolicy;
+    public Filter(int numOfMedPolicyLow, int getNumOfMedPolicyHigh) {
+        this.numOfMedPolicyLow = numOfMedPolicyLow;
+        this.getNumOfMedPolicyHigh = getNumOfMedPolicyHigh;
+    }
+
+    public int getNumOfMedPolicyLow() {
+        return numOfMedPolicyLow;
+    }
+
+    public void setNumOfMedPolicyLow(int numOfMedPolicyLow) {
+        this.numOfMedPolicyLow = numOfMedPolicyLow;
+    }
+
+    public int getGetNumOfMedPolicyHigh() {
+        return getNumOfMedPolicyHigh;
+    }
+
+    public void setGetNumOfMedPolicyHigh(int getNumOfMedPolicyHigh) {
+        this.getNumOfMedPolicyHigh = getNumOfMedPolicyHigh;
     }
 
     public String getDiagnosis() {
@@ -41,11 +59,11 @@ public class Filter {
         this.doctor = doctor;
     }
 
-    public String getNumOfDepartment() {
-        return numOfDepartment;
+    public Department getDepartment() {
+        return department;
     }
 
-    public void setNumOfDepartment(String numOfDepartment) {
-        this.numOfDepartment = numOfDepartment;
+    public void setDepartment(Department department) {
+        this.department = department;
     }
 }

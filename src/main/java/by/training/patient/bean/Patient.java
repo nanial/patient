@@ -11,17 +11,19 @@ public class Patient implements Serializable {
     private String name;
     private String address;
     private String phone;
-    private String numOfMedPolicy;
+    private int numOfMedPolicy;
     private String diagnosis;
     private String doctor;
-    private String numOfDepartment;
+    private Department department;
 
     public Patient() {
     }
-    public Patient(String surname, String name, String address,
-                   String phone, String numOfMedPolicy, String diagnosis,
-                   String doctor, String numOfDepartment) {
 
+    public Patient(String surname, String name, String address,
+                   String phone, int numOfMedPolicy, String diagnosis,
+                   String doctor, Department department) {
+
+        this.patientId = count.incrementAndGet();
         this.surname = surname;
         this.name = name;
         this.address = address;
@@ -29,7 +31,11 @@ public class Patient implements Serializable {
         this.numOfMedPolicy = numOfMedPolicy;
         this.diagnosis = diagnosis;
         this.doctor = doctor;
-        this.numOfDepartment = numOfDepartment;
+        this.department = department;
+    }
+
+    public void setPatientId(int patientId) {
+        this.patientId = patientId;
     }
 
     public String getDoctor() {
@@ -38,14 +44,6 @@ public class Patient implements Serializable {
 
     public void setDoctor(String doctor) {
         this.doctor = doctor;
-    }
-
-    public String getNumOfDepartment() {
-        return numOfDepartment;
-    }
-
-    public void setNumOfDepartment(String numOfDepartment) {
-        this.numOfDepartment = numOfDepartment;
     }
 
     public int getPatientId() {
@@ -84,11 +82,11 @@ public class Patient implements Serializable {
         this.phone = phone;
     }
 
-    public String getNumOfMedPolicy() {
+    public int getNumOfMedPolicy() {
         return numOfMedPolicy;
     }
 
-    public void setNumOfMedPolicy(String numOfMedPolicy) {
+    public void setNumOfMedPolicy(int numOfMedPolicy) {
         this.numOfMedPolicy = numOfMedPolicy;
     }
 
@@ -100,6 +98,14 @@ public class Patient implements Serializable {
         this.diagnosis = diagnosis;
     }
 
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -108,15 +114,17 @@ public class Patient implements Serializable {
         Patient patient = (Patient) o;
 
         if (getPatientId() != patient.getPatientId()) return false;
+        if (getNumOfMedPolicy() != patient.getNumOfMedPolicy()) return false;
         if (getSurname() != null ? !getSurname().equals(patient.getSurname()) : patient.getSurname() != null)
             return false;
         if (getName() != null ? !getName().equals(patient.getName()) : patient.getName() != null) return false;
         if (getAddress() != null ? !getAddress().equals(patient.getAddress()) : patient.getAddress() != null)
             return false;
         if (getPhone() != null ? !getPhone().equals(patient.getPhone()) : patient.getPhone() != null) return false;
-        if (getNumOfMedPolicy() != null ? !getNumOfMedPolicy().equals(patient.getNumOfMedPolicy()) : patient.getNumOfMedPolicy() != null)
+        if (getDiagnosis() != null ? !getDiagnosis().equals(patient.getDiagnosis()) : patient.getDiagnosis() != null)
             return false;
-        return getDiagnosis() != null ? getDiagnosis().equals(patient.getDiagnosis()) : patient.getDiagnosis() == null;
+        if (getDoctor() != null ? !getDoctor().equals(patient.getDoctor()) : patient.getDoctor() != null) return false;
+        return department == patient.department;
     }
 
     @Override
@@ -126,8 +134,10 @@ public class Patient implements Serializable {
         result = 31 * result + (getName() != null ? getName().hashCode() : 0);
         result = 31 * result + (getAddress() != null ? getAddress().hashCode() : 0);
         result = 31 * result + (getPhone() != null ? getPhone().hashCode() : 0);
-        result = 31 * result + (getNumOfMedPolicy() != null ? getNumOfMedPolicy().hashCode() : 0);
+        result = 31 * result + getNumOfMedPolicy();
         result = 31 * result + (getDiagnosis() != null ? getDiagnosis().hashCode() : 0);
+        result = 31 * result + (getDoctor() != null ? getDoctor().hashCode() : 0);
+        result = 31 * result + (department != null ? department.hashCode() : 0);
         return result;
     }
 
@@ -139,8 +149,10 @@ public class Patient implements Serializable {
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", phone='" + phone + '\'' +
-                ", numOfMedPolicy='" + numOfMedPolicy + '\'' +
+                ", numOfMedPolicy=" + numOfMedPolicy +
                 ", diagnosis='" + diagnosis + '\'' +
+                ", doctor='" + doctor + '\'' +
+                ", department=" + department +
                 '}';
     }
 }
