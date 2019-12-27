@@ -24,7 +24,7 @@ public class PatientManagerImpl implements PatientManager {
     }
 
     @Override
-    public ArrayList<Patient> patientCertainDoctor(ArrayList<Patient> patientList, Filter filter) {
+    public ArrayList<Patient> patientCertainDoctor(Filter filter) {
 
         ArrayList<Patient> patients = new ArrayList<>();
 
@@ -45,7 +45,7 @@ public class PatientManagerImpl implements PatientManager {
     }
 
     @Override
-    public ArrayList<Patient> patientCertainDiagnosis(ArrayList<Patient> patientList, Filter filter) {
+    public ArrayList<Patient> patientCertainDiagnosis(Filter filter) {
 
         ArrayList<Patient> patients = new ArrayList<>();
 
@@ -66,7 +66,7 @@ public class PatientManagerImpl implements PatientManager {
     }
 
     @Override
-    public ArrayList<Patient> patientCertainNumPolicy(ArrayList<Patient> patientList, Filter filter) {
+    public ArrayList<Patient> patientCertainNumPolicy(Filter filter) {
 
         ArrayList<Patient> patients = new ArrayList<>();
 
@@ -89,7 +89,7 @@ public class PatientManagerImpl implements PatientManager {
     }
 
     @Override
-    public ArrayList<Patient> patientCertainDepartment(ArrayList<Patient> patientList, Filter filter) {
+    public ArrayList<Patient> patientCertainDepartment(Filter filter) {
 
         ArrayList<Patient> patients = new ArrayList<>();
 

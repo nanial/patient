@@ -8,10 +8,10 @@ import java.util.ArrayList;
 public interface PatientManager {
 
     ArrayList<Patient> patientList();//receive from dao
-    ArrayList<Patient> patientCertainDoctor(ArrayList<Patient> patientList, Filter filter);// native method
-    ArrayList<Patient> patientCertainDiagnosis(ArrayList<Patient> patientList, Filter filter);// native method
-    ArrayList<Patient> patientCertainNumPolicy(ArrayList<Patient> patientList, Filter filter);// native method
-    ArrayList<Patient> patientCertainDepartment(ArrayList<Patient> patientList, Filter filter);// native method
+    ArrayList<Patient> patientCertainDoctor(Filter filter);// native method
+    ArrayList<Patient> patientCertainDiagnosis(Filter filter);// native method
+    ArrayList<Patient> patientCertainNumPolicy(Filter filter);// native method
+    ArrayList<Patient> patientCertainDepartment(Filter filter);// native method
 
     ArrayList<Patient> writePatientInFile(ArrayList<Patient> patients);// from dao
 }

@@ -6,6 +6,12 @@
     <void property="address">
      <string>Tolstogo, 18, 25</string>
     </void>
+    <void property="department">
+     <object class="java.lang.Enum" method="valueOf">
+      <class>by.training.patient.bean.Department</class>
+      <string>THERAPY</string>
+     </object>
+    </void>
     <void property="diagnosis">
      <string>diabetes</string>
     </void>
@@ -15,11 +21,11 @@
     <void property="name">
      <string>Illia</string>
     </void>
-    <void property="numOfDepartment">
-     <string>Therapy</string>
-    </void>
     <void property="numOfMedPolicy">
-     <string>AM 236159423</string>
+     <int>236159423</int>
+    </void>
+    <void property="patientId">
+     <int>1</int>
     </void>
     <void property="phone">
      <string>+375172791285</string>
@@ -28,9 +34,6 @@
      <string>Anenkov</string>
     </void>
    </object>
-  </void>
-  <void method="add">
-   <null/>
   </void>
  </object>
 </java>

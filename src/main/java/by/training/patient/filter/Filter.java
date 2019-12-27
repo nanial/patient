@@ -13,13 +13,13 @@ public class Filter {
     public Filter() {
     }
 
-    public Filter(String doctor) {
+    public Filter(String diagnosis, String doctor) {
         this.doctor = doctor;
+        this.diagnosis = diagnosis;
     }
 
-    public Filter(String diagnosis, String department) {
-        this.diagnosis = diagnosis;
-        this.department = Department.valueOf(department);
+    public Filter(String department) {
+        this.department = Department.valueOf(department.toUpperCase().trim());
     }
 
     public Filter(int numOfMedPolicyLow, int getNumOfMedPolicyHigh) {
