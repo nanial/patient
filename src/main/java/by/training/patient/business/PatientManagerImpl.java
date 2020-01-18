@@ -1,6 +1,6 @@
-package by.training.patient.bussiness;
+package by.training.patient.business;
 
-import by.training.patient.apibussiness.PatientManager;
+import by.training.patient.apibusiness.PatientManager;
 import by.training.patient.apidao.PatientDAO;
 import by.training.patient.bean.Patient;
 import by.training.patient.filter.Filter;

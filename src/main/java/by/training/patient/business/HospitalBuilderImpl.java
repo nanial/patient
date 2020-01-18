@@ -1,6 +1,6 @@
-package by.training.patient.bussiness;
+package by.training.patient.business;
 
-import by.training.patient.apibussiness.HospitalBuilder;
+import by.training.patient.apibusiness.HospitalBuilder;
 import by.training.patient.bean.Hospital;
 
 

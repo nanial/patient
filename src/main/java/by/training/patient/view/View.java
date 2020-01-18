@@ -4,5 +4,5 @@ import by.training.patient.exception.MenuException;
 
 public interface View {
 
-    void userService() throws MenuException;
+        void userService() throws MenuException;
 }

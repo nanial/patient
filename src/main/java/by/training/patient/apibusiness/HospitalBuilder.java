@@ -1,4 +1,4 @@
-package by.training.patient.apibussiness;
+package by.training.patient.apibusiness;
 
 import by.training.patient.bean.Hospital;
 

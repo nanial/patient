@@ -1,11 +1,10 @@
 package by.training.patient.controller;
 
-import by.training.patient.apibussiness.PatientManager;
+import by.training.patient.apibusiness.PatientManager;
 import by.training.patient.bean.Hospital;
 import by.training.patient.bean.Patient;
-import by.training.patient.bussiness.HospitalFactory;
-import by.training.patient.bussiness.MenuFactory;
-import by.training.patient.bussiness.PatientManagerImpl;
+import by.training.patient.business.Factory;
+import by.training.patient.business.PatientManagerImpl;
 import by.training.patient.dao.PatientDAOImpl;
 import by.training.patient.exception.MenuException;
 import by.training.patient.filter.Filter;
@@ -16,15 +15,16 @@ import java.util.ArrayList;
 
 public class Dispatcher {
 
-    Hospital hospital = new HospitalFactory().getHospitalBuilder().getHospital();//create hospital
+    Hospital hospital = new Factory().getHospitalBuilder().getHospital();//create hospital
     PatientManager patientManager = new PatientManagerImpl(new PatientDAOImpl());
 
 
     public void execute() {
 
-        patientManager.writePatientInFile(hospital.fillList());//init base
-        View view = new MenuFactory().getMenuBuilder().getMenu();
+        View view = new Factory().getMenuBuilder().getMenu();
 
+        patientManager.writePatientInFile(hospital.fillList());//init base
+       // View view = new AlternativeMenu();
         try {
             view.userService();
         }

@@ -1,7 +1,6 @@
 package by.training.patient.view;
 
-import by.training.patient.bean.Department;
-import by.training.patient.bussiness.DispatcherFactory;
+import by.training.patient.business.Factory;
 import by.training.patient.controller.Dispatcher;
 import by.training.patient.exception.MenuException;
 import by.training.patient.filter.Filter;
@@ -11,7 +10,7 @@ import java.util.Scanner;
 
 public class Menu implements View {
 
-    Dispatcher dispatcher = new DispatcherFactory().getDispatcherBuilder().getDispatcher();
+    Dispatcher dispatcher = new Factory().getDispatcherBuilder().getDispatcher();
 
 
     public void userService() throws MenuException {

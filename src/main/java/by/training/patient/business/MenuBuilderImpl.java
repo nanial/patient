@@ -1,6 +1,6 @@
-package by.training.patient.bussiness;
+package by.training.patient.business;
 
-import by.training.patient.apibussiness.MenuBuilder;
+import by.training.patient.apibusiness.MenuBuilder;
 import by.training.patient.view.Menu;
 
 public class MenuBuilderImpl implements MenuBuilder {

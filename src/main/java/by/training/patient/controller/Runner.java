@@ -5,14 +5,14 @@ package by.training.patient.controller;
 // имеющих данный диагноз;b) список пациентов, номер медицинской карты
 // которых находится в заданном интервале.
 
-import by.training.patient.bussiness.DispatcherFactory;
+import by.training.patient.business.Factory;
 
 
 public class Runner {
 
     public static void main(String[] args) {
 
-        Dispatcher dispatcher = new DispatcherFactory().getDispatcherBuilder().getDispatcher();
+        Dispatcher dispatcher = new Factory().getDispatcherBuilder().getDispatcher();
         dispatcher.execute();
     }
 }

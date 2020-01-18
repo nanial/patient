@@ -1,6 +1,6 @@
-package by.training.patient.bussiness;
+package by.training.patient.business;
 
-import by.training.patient.apibussiness.DispatcherBuilder;
+import by.training.patient.apibusiness.DispatcherBuilder;
 import by.training.patient.controller.Dispatcher;
 
 public class DispatcherBuilderImpl implements DispatcherBuilder {
